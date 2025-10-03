@@ -1,0 +1,46 @@
+{
+  "SCRIPT_GENERATION_PROMPT": "请为主题\"{topic}\"生成一个完整的短视频内容，包含以下部分：\n\n1. 视频拍摄脚本：包含场景描述、镜头运动、拍摄角度等详细信息\n2. 配音脚本：清晰的旁白内容，语言生动有趣\n3. 分镜图绘制提示词：每个场景的详细视觉描述，适合AI绘图生成\n4. 图生视频提示词：描述画面中的动作、运动效果\n\n要求：\n- 视频总长度控制在{duration}秒\n- 分镜图数量：{scene_count}张\n- 每个分镜对应{scene_duration}秒的视频内容\n- 风格要求：{style}\n- 语言：{language}\n\n请以JSON格式返回，包含以下字段：\n{{\n    \"video_script\": \"详细的视频拍摄脚本\",\n    \"audio_script\": \"完整的配音脚本文本\",\n    \"storyboard_prompts\": [\"分镜图1的绘制提示词\", \"分镜图2的绘制提示词\", ...],\n    \"video_prompts\": [\"视频1的动作提示词\", \"视频2的动作提示词\", ...],\n    \"estimated_duration\": 总时长估计(秒),\n    \"scene_count\": 场景数量\n}}",
+  
+  "IMAGE_OPTIMIZATION_SYSTEM_PROMPT": "你是一个专业的AI绘图提示词优化专家。\n你的任务是将用户的中文描述转换为更详细、更适合AI绘图的英文提示词。\n\n优化要求：\n1. 使用专业的摄影和艺术术语\n2. 包含具体的视觉细节描述\n3. 添加适当的风格和质量标签\n4. 确保提示词结构清晰、逻辑性强\n5. 长度控制在200个英文单词以内\n\n格式要求：\n- 主体描述 + 环境背景 + 风格标签 + 质量标签\n- 使用逗号分隔不同元素\n- 避免使用复杂句式\n\n示例格式：\n[主体], [动作/姿态], [环境/背景], [光照], [风格], [质量标签]",
+  
+  "VIDEO_OPTIMIZATION_SYSTEM_PROMPT": "你是一个专业的AI视频生成提示词优化专家。\n你的任务是将用户的描述转换为更详细的视频动作和运动描述提示词。\n\n优化要求：\n1. 明确描述画面中的运动和动作\n2. 包含镜头运动描述（推拉摇移等）\n3. 描述时间变化和动态效果\n4. 确保动作自然流畅\n5. 长度控制在150个英文单词以内\n\n运动类型包括：\n- 对象运动：人物动作、物体移动\n- 镜头运动：zoom in/out, pan left/right, tilt up/down, dolly, tracking\n- 环境变化：光影变化、天气变化、时间变化\n- 特效：粒子效果、过渡效果\n\n示例格式：\n[主体动作], [镜头运动], [环境变化], [时间节奏], [视觉效果]",
+  
+  "STYLE_TEMPLATES": {
+    "现代简约": {
+      "image_suffix": "modern minimalist style, clean composition, simple geometry, white background, soft lighting, professional photography",
+      "video_suffix": "smooth camera movement, gentle transitions, modern aesthetic, clean visuals"
+    },
+    "科技感": {
+      "image_suffix": "futuristic, high-tech, digital art, neon lights, metallic surfaces, sci-fi aesthetic, 4k digital art",
+      "video_suffix": "dynamic camera movement, digital effects, glowing elements, tech atmosphere"
+    },
+    "温馨": {
+      "image_suffix": "warm lighting, cozy atmosphere, soft colors, comfortable setting, natural light, lifestyle photography",
+      "video_suffix": "gentle camera movement, warm atmosphere, natural transitions, comfortable pace"
+    },
+    "商务": {
+      "image_suffix": "professional, business environment, corporate style, formal lighting, office setting, commercial photography",
+      "video_suffix": "steady camera work, professional presentation, business atmosphere, confident movement"
+    },
+    "艺术": {
+      "image_suffix": "artistic, creative composition, painterly style, dramatic lighting, fine art, expressive, masterpiece",
+      "video_suffix": "creative camera angles, artistic movement, expressive visuals, dramatic effects"
+    },
+    "复古": {
+      "image_suffix": "vintage style, retro aesthetic, film grain, nostalgic colors, classic composition, analog photography",
+      "video_suffix": "vintage camera movement, retro transitions, nostalgic atmosphere, classic cinematography"
+    }
+  },
+  
+  "QUALITY_TAGS": {
+    "图像": "high quality, detailed, sharp focus, professional, 8k resolution, award winning, masterpiece",
+    "视频": "high quality video, smooth motion, professional cinematography, 4k, detailed, cinematic"
+  },
+  
+  "DEFAULT_SETTINGS": {
+    "duration": 60,
+    "scene_count": 5,
+    "style": "现代简约",
+    "language": "中文"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "2": {
+    "inputs": {
+      "filename_prefix": "audio/ComfyUI",
+      "quality": "V0",
+      "audioUI": "",
+      "audio": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "SaveAudioMP3",
+    "_meta": {
+      "title": "保存音频（MP3）"
+    }
+  },
+  "4": {
+    "inputs": {
+      "top_k": 30,
+      "top_p": 0.8,
+      "temperature": 0.8,
+      "num_beams": 3,
+      "max_mel_tokens": 1500,
+      "max_text_tokens_per_sentence": 120,
+      "custom_cuda_kernel": false,
+      "deepspeed": false,
+      "unload_model": true,
+      "emo_alpha": 1,
+      "emo_vector": "",
+      "use_emo_text": true,
+      "emo_text": "不开心",
+      "use_random": false,
+      "emo_alpha_s2": 1,
+      "emo_vector_s2": "",
+      "use_emo_text_s2": true,
+      "emo_text_s2": "大笑笑。。",
+      "use_random_s2": false,
+      "audio": [
+        "5",
+        0
+      ],
+      "text": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "IndexTTS2Run",
+    "_meta": {
+      "title": "IndexTTS2 Run"
+    }
+  },
+  "5": {
+    "inputs": {
+      "speaker": "大家好我是你的温柔知性女友.wav"
+    },
+    "class_type": "IndexSpeakersPreview",
+    "_meta": {
+      "title": "语音载入"
+    }
+  },
+  "6": {
+    "inputs": {
+      "multi_line_prompt": "我今天很不开心，呜呜"
+    },
+    "class_type": "MultiLinePromptIndex",
+    "_meta": {
+      "title": "多行文本框"
+    }
+  },
+  "7": {
+    "inputs": {
+      "audioUI": "",
+      "audio": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "PreviewAudio",
+    "_meta": {
+      "title": "预览音频"
+    }
+  }
+}

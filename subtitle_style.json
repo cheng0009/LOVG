@@ -1,0 +1,24 @@
+{
+  "font_scale": 2.2,
+  "text_color": [
+    255,
+    255,
+    255
+  ],
+  "outline_color": [
+    0,
+    0,
+    0
+  ],
+  "bg_color": [
+    0,
+    0,
+    0
+  ],
+  "thickness": 3,
+  "outline_thickness": 2,
+  "bg_padding": 15,
+  "line_height": 60,
+  "bottom_margin": 60,
+  "bg_alpha": 0.75
+}
