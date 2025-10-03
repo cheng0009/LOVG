@@ -2,6 +2,9 @@
 
 一个基于AI的完整视频生成系统，从文字主题到最终视频成品的一站式解决方案。
 
+<img width="3696" height="1791" alt="image" src="https://github.com/user-attachments/assets/428bf101-301d-4abf-9996-60936b32f732" />
+
+
 ## 🚀 快速开始
 
 ### 演示版本（推荐首次体验）
@@ -150,6 +153,10 @@ streamlit run simple_demo.py
    - 点击"一键生成完整视频"体验自动化流程
 4. 在每个步骤中预览和调整生成内容
 
+### 5. 定制二开服务
+1. 联系wechat：zhiweizhiyuan（备注：github）
+2. 关注公众号：老成教你玩互联网，获取更多AI黑科技软件！
+   
 ## ❓ 常见问题
 
 ### Q: ComfyUI连接失败
